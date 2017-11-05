@@ -3,6 +3,8 @@ package ar.uba.fi.tdd.rulogic;
 import java.io.IOException;
 import java.util.Scanner;
 
+import ar.uba.fi.tdd.rulogic.model.*;
+
 /**
  * Console application.
  *
