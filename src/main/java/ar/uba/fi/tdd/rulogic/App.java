@@ -15,7 +15,8 @@ public class App
 		return consulta.matches("^[a-z]*\\([a-z,]*\\)");
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		KnowledgeBase database = new KnowledgeBase();
 		System.out.println("-------INICIO DEL INTERPRETE-------");
 		System.out.println("I shall answer all your questions!");
 		String consulta = "";
