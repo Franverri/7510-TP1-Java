@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" time="0.207" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" time="0.607" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -24,6 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
+    <property name="net.sourceforge.cobertura.datafile" value="/home/franco/Escritorio/TDD/TPs/7510-TP1-Java/target/cobertura/cobertura.ser"/>
     <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -41,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher cobertura:cobertura"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -56,8 +57,9 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="project.build.outputDirectory" value="/home/franco/Escritorio/TDD/TPs/7510-TP1-Java/target/generated-classes/cobertura"/>
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="test" time="0.103"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="test" time="0.531"/>
 </testsuite>
