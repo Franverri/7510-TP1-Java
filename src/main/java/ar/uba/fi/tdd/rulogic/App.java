@@ -11,7 +11,7 @@ import ar.uba.fi.tdd.rulogic.model.*;
  */
 public class App
 {
-	private static boolean consultacorrecta(String consulta) {
+	public static boolean consultacorrecta(String consulta) {
 		return consulta.matches("^[a-z]*\\([a-z,]*\\)");
 	}
 	
@@ -25,7 +25,11 @@ public class App
 			System.out.println("Ingrese su consulta o 'q' para salir: ");
 			consulta = scanner.nextLine().replaceAll("\\s+","");
 			if(consultacorrecta(consulta)) {
-				System.out.println("SI");
+				if(database.answer(consulta)) {
+					System.out.println("SI");
+				} else {
+					System.out.println("NO");
+				}
 			} else if (!consulta.equals("q")){
 				System.out.println("Sintaxis de la consulta inválida");
 			}
