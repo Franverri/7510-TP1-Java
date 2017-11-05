@@ -63,7 +63,7 @@ public class KnowledgeBase {
 	 * línea leida, es decir si corresponde a una regla o a un fact.
 	 * @param linea: representa una única línea del archivo procesado
 	 */
-	private void procesarLinea(String linea) {
+	void procesarLinea(String linea) {
 		//Verifica si la sintaxis de esa línea en particular es correcta
 		if(sintaxisCorrecta(linea)) {
 			//Compruebo si está haciendo referencia a una regla o a un hecho

@@ -11,7 +11,7 @@ public class KnowledgeBaseTest {
 	@Test
 	public void testIdentificarReglaValida() {
 		boolean evaluacion = db.esRegla("hijo(X, Y) :- varon(X), padre(Y, X).");
-		Assert.assertTrue(evaluacion);
+		Assert.assertTrue(evaluacion);	
 	}
 	
 	@Test
@@ -125,5 +125,41 @@ public class KnowledgeBaseTest {
 		db.agregarFact("padre(demian,lara)");
 		boolean evaluacion = db.evaluarRegla("sobrina(lara,demian,franco)");
 		Assert.assertTrue(evaluacion);
+	}
+	
+	@Test
+	/**
+	 * Ver si cada linea procesada del archivo agrega un fact o rule a la 
+	 * base de datos correctamente
+	 */
+	public void testProcesarLineaHecho() {
+		db.procesarLinea("crack(messi).");
+		//Si conuslto sobre ese fact debería devolver true si lo agregó bien
+		boolean evaluacion = db.evaluarFact("crack(messi)");
+		Assert.assertTrue(evaluacion);
+	}	
+	
+	@Test
+	public void testProcesarLineaRegla() {
+		db.procesarLinea("sobrina(X,Y,Z):-mujer(X),hermano(Y,Z),padre(Y,X).");
+		//Agrego los facts para poder testear si la regla se agregó correctamente
+		db.procesarLinea("mujer(lara).");
+		db.procesarLinea("hermano(demian,franco).");
+		db.procesarLinea("padre(demian,lara).");
+		//Si conuslto sobre ese fact debería devolver true si lo agregó bien
+		boolean evaluacion = db.evaluarRegla("sobrina(lara,demian,franco)");
+		Assert.assertTrue(evaluacion);
+	}
+	
+	@Test
+	/**
+	 * Ver que si la linea procesada tiene una sintaxis invalida no se agrega
+	 * a la base de datos
+	 */
+	public void testProcesarLineaInvalida() {
+		db.procesarLinea("crack messi.");
+		//Si conuslto sobre ese fact debería devolver false
+		boolean evaluacion = db.evaluarFact("crack(messi)");
+		Assert.assertFalse(evaluacion);
 	}	
 }
