@@ -1,5 +1,7 @@
 package ar.uba.fi.tdd.rulogic.model;
 
+import java.io.FileNotFoundException;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -161,5 +163,25 @@ public class KnowledgeBaseTest {
 		//Si conuslto sobre ese fact debería devolver false
 		boolean evaluacion = db.evaluarFact("crack(messi)");
 		Assert.assertFalse(evaluacion);
+	}	
+	
+	@Test
+	/**
+	 * Ver que si la función que redirige el flujo de las consultas esta funcionando.
+	 * El resto de funciones que esta utilizada ya fueron probadas previamente.
+	 */
+	public void testContestarConsultaHecho() {
+		boolean evaluacion = db.answer("varon(juan)");
+		Assert.assertTrue(evaluacion);
+	}
+	
+	@Test
+	/**
+	 * Ver que si la función que redirige el flujo de las consultas esta funcionando.
+	 * El resto de funciones que esta utilizada ya fueron probadas previamente.
+	 */
+	public void testContestarConsultaRegla() {
+		boolean evaluacion = db.answer("hijo(pepe,juan)");
+		Assert.assertTrue(evaluacion);
 	}	
 }
