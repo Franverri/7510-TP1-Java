@@ -1,6 +1,7 @@
 package ar.uba.fi.tdd.rulogic.model;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +9,6 @@ import org.junit.Test;
 public class KnowledgeBaseTest {
 	
 	private KnowledgeBase db = new KnowledgeBase();
-	private KnowledgeBase dbDesdeRutaFija = new KnowledgeBase("src/main/resources/rules.db");
 
 	@Test
 	public void testIdentificarReglaValida() {
@@ -100,7 +100,8 @@ public class KnowledgeBaseTest {
 	 * abre el archivo de ejemplo y si el fact "varon(juan)" da true es porque abrio
 	 * el archivo correctamente
 	 */
-	public void testUbicacionArchivoComoParametro() {
+	public void testUbicacionArchivoComoParametro() throws FileNotFoundException, IOException {
+		KnowledgeBase dbDesdeRutaFija = new KnowledgeBase("src/main/resources/rules.db");
 		boolean evaluacion = dbDesdeRutaFija.evaluarFact("varon(juan)");
 		Assert.assertTrue(evaluacion);
 	}
@@ -184,4 +185,9 @@ public class KnowledgeBaseTest {
 		boolean evaluacion = db.answer("hijo(pepe,juan)");
 		Assert.assertTrue(evaluacion);
 	}	
+	
+	@Test(expected = FileNotFoundException.class)
+	public void testFileNotFoundException() throws FileNotFoundException, IOException {
+	    KnowledgeBase bdd = new KnowledgeBase("ArchivoNoExiste");
+	}
 }

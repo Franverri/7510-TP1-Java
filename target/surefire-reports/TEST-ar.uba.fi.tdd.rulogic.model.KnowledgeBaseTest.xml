@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="20" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" time="0.431" errors="0" skipped="0">
+<testsuite tests="21" failures="0" name="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" time="0.293" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -64,21 +64,22 @@
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testAgregarFact" time="0.001"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarFactPresenteEnBD" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testContestarConsultaHecho" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testContestarConsultaRegla" time="0.002"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testContestarConsultaRegla" time="0.001"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEsRegla" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarFactAusenteEnBD" time="0.001"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarFactAusenteEnBD" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testIdentificarReglaIncorrecta" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarReglaAusenteEnBD" time="0.001"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testSintaxisHechoCorrecta" time="0"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testSintaxisHechoCorrecta" time="0.001"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testSintaxisHechoIncorrecta" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testAgregarRegla" time="0.001"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarReglaPresenteEnBD" time="0.001"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEvaluarReglaPresenteEnBD" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testProcesarLineaHecho" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testProcesarLineaRegla" time="0.001"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testIdentificarReglaValida" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testSintaxisReglaIncorrecta" time="0"/>
   <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testSintaxisReglaCorrecta" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEsFact" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testProcesarLineaInvalida" time="0"/>
-  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testUbicacionArchivoComoParametro" time="0"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testEsFact" time="0.001"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testProcesarLineaInvalida" time="0.001"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testUbicacionArchivoComoParametro" time="0.001"/>
+  <testcase classname="ar.uba.fi.tdd.rulogic.model.KnowledgeBaseTest" name="testFileNotFoundException" time="0"/>
 </testsuite>

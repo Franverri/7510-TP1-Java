@@ -29,18 +29,10 @@ public class KnowledgeBase {
 		}
 	}
 	
-	public KnowledgeBase(String rutaArchivo) {
+	public KnowledgeBase(String rutaArchivo) throws FileNotFoundException, IOException {
 		this.facts = new ArrayList<Fact>();
 		this.rules = new ArrayList<Rule>();
-		try {
-			parsearArchivo(rutaArchivo);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		parsearArchivo(rutaArchivo);
 	}
 	
 	/**
